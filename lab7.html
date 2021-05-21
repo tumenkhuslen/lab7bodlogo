@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Бодлого</title>
+	<script type="text/javascript">
+	
+	   function myf1(){
+	
+    var x=parseInt(document.getElementById("x").value);
+    var y=parseInt(document.getElementById("y").value);
+    z=x+y;
+document.getElementById("demo2").innerHTML = z
+   }
+		function myf2(y) {
+			var pw = prompt("password oruulna uu");
+
+  if(pw == "") {  
+     document.getElementById("demo").innerHTML = "**Fill the password please!";  
+     return false;  
+  }  
+   
+  if(pw.length < 10) {  
+     document.getElementById("demo").innerHTML = "10 aas deesh useg baih ystoi";  
+     return false;  
+  }  
+  
+ 
+   else {  
+     alert("Password is correct");  
+	 document.getElementById("demo").innerHTML = "Password zow baina"; 
+  }  
+} 
+	
+
+		function myf3() {
+			var max = prompt("Too oruulna uu");
+    var sieve = [], i, j, primes = [];
+    for (i = 2; i <= max; ++i) {
+        if (!sieve[i]) {
+            // i has not been marked -- it is prime
+            primes.push(i);
+            for (j = i << 1; j <= max; j += i) {
+                sieve[j] = true;
+            }
+        }
+    }
+    too[k] = primes;
+	k++;
+	document.getElementById("demo4").innerHTML = too.join(" "); 
+}
+	
+
+   function myf4(){
+	var  x, y, z, m, n;
+	var a = parseInt(prompt("Davharaa oruulna uu"));
+	var b = parseInt(prompt("Ortsoo oruulna uu"));
+	var c = parseInt(prompt("Neg davhar heden ail baih be"));
+	var d = parseInt(prompt("Haalgani dugaar"));    
+      d=a*c;
+      x=n/d;
+      m=n%d;
+      
+      if(m==0) m=d; else x=x+1;
+     
+      y=m/c;
+      z=m%c;
+     
+      if(z==0) z=c; else y=y+1;
+     
+
+	  document.getElementById("demo3").innerHTML = x + " ortsni" + y + " davharin" + z + " haalga ";
+ 
+      }
+   
+	</script>
+</head>
+<body>
+	<table border="2" style="border-collapse: collapse;">
+		<tr>
+			<td>1st number</td>
+			<td><input type="number" id="x"></td>
+		</tr>
+		<tr>
+			<td>2nd number</td>
+			<td><input type="number" id="y"></td>
+		</tr>
+		<tr>
+			<td colspan="2" align="center"><button onclick="myf1()" id="mul">Plus</button></td>
+		</tr>
+		<tr>
+			<td colspan="2">The result is:<p id="demo2"></p></td>
+		</tr>
+	</table>
+<button onclick="myf2()">Bod 2</button>
+<p id="demo"></p>
+<button onclick="myf3()">Bod 3</button>
+<br>
+<p id="demo4"></p>
+<br>
+<button onclick="myf4()">Bod 4</button>
+<p id="demo3"></p>
+
+</body>
+</html>
